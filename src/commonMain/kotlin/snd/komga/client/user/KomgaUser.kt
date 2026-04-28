@@ -25,7 +25,7 @@ data class KomgaUser(
     val sharedLibrariesIds: Set<KomgaLibraryId>,
     val labelsAllow: Set<String>,
     val labelsExclude: Set<String>,
-    val ageRestriction: KomgaAgeRestriction?
+    val ageRestriction: KomgaAgeRestriction? = null
 ) {
     fun roleAdmin() = roles.contains("ADMIN")
     fun roleFileDownload() = roles.contains("FILE_DOWNLOAD")
